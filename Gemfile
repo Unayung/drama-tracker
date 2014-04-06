@@ -44,6 +44,7 @@ group :development do
   gem "capistrano-ext"
   gem "rvm-capistrano"
   gem "spring"
+  gem "seed_dump"
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
