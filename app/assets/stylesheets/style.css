@@ -2173,71 +2173,6 @@ footer .social a {
 /* Responsive */
 
 @media (max-width: 480px){
-   header .list .social{
-   text-align:center;
-   }
-   .logo{
-   margin:0 auto;
-   }
-   .da-slide h2{
-   width:100%;
-   font-size:30px;
-   top:40px;
-   }
-   .da-slide p{
-   width:80%;
-   font-size:15px;
-   top:90px;
-   }
-   .da-slide .da-link{
-   top:180px;
-   }
-   .da-slide .da-img{
-   display:none;
-   }
-   .serv-a,.feat-a,.price-a{
-   width:100%;
-   float:none;
-   margin-right:0px;
-   }
-   .serv-b,.feat-b,.price-b{
-   width:100%;
-   float:none;
-   } 
-   .blog .meta span{
-   float:none !important;
-   }
-   .feat{
-   text-align:center;
-   }
-   .teams .pic img {
-   width:100%;
-   max-width:150px;
-   }
-   .time .tidate{
-   float:none;
-   margin:0 auto;
-   margin-bottom:10px;
-   }
-   .time .timatter{
-   width:92%;
-   }
-   .aserv-l{
-   width:100%;
-   float:none;
-   margin-right:0px;
-   }
-   .aserv-r{
-   width:100%;
-   float:none;
-   }   
-   
-	.tp-banner a.btn {
-		padding: 2px 5px !important;
-		font-size: 8px !important;
-	}
-}
-@media screen and (device-aspect-ratio: 40/71){
 	header .list .social{
 	text-align:center;
 	}
@@ -2296,11 +2231,13 @@ footer .social a {
 	width:100%;
 	float:none;
 	}   
+   
 	.tp-banner a.btn {
 		padding: 2px 5px !important;
 		font-size: 8px !important;
 	}
 }
+
 @media (max-width: 767px){
 	.container{
 		max-width:100%;
@@ -2412,26 +2349,89 @@ footer .social a {
 		font-size: 10px;
 	}
 }
-
 @media (max-width: 991px){
-   .navbar .nav{
-   border:0px !important;
-   }
-   .navbar .nav > li > a{
-   border:0px !important;
-   }
-   
-   .dropdown-menu a{
-   border-bottom:none !important;
-   }
-   .form-horizontal .control-label {
-		text-align: left;
+	.navbar .nav{
+	border:0px !important;
 	}
-   .entry img{
-   display:block;
-   float:none;
-   margin:0 auto;
-   margin-bottom:8px;
-   width:100%;
-   }   
+	.navbar .nav > li > a{
+	border:0px !important;
+	}
+
+	.dropdown-menu a{
+	border-bottom:none !important;
+	}
+	.form-horizontal .control-label {
+	text-align: left;
+	}
+	.entry img{
+	display:block;
+	float:none;
+	margin:0 auto;
+	margin-bottom:8px;
+	width:100%;
+	}   
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait){
+	header .list .social{
+	text-align:center;
+	}
+	.logo{
+	margin:0 auto;
+	}
+	.da-slide h2{
+	width:100%;
+	font-size:30px;
+	top:40px;
+	}
+	.da-slide p{
+	width:80%;
+	font-size:15px;
+	top:90px;
+	}
+	.da-slide .da-link{
+	top:180px;
+	}
+	.da-slide .da-img{
+	display:none;
+	}
+	.serv-a,.feat-a,.price-a{
+	width:100%;
+	float:none;
+	margin-right:0px;
+	}
+	.serv-b,.feat-b,.price-b{
+	width:100%;
+	float:none;
+	} 
+	.blog .meta span{
+	float:none !important;
+	}
+	.feat{
+	text-align:center;
+	}
+	.teams .pic img {
+	width:100%;
+	max-width:150px;
+	}
+	.time .tidate{
+	float:none;
+	margin:0 auto;
+	margin-bottom:10px;
+	}
+	.time .timatter{
+	width:92%;
+	}
+	.aserv-l{
+	width:100%;
+	float:none;
+	margin-right:0px;
+	}
+	.aserv-r{
+	width:100%;
+	float:none;
+	}   
+	.tp-banner a.btn {
+		padding: 2px 5px !important;
+		font-size: 8px !important;
+	}
 }
