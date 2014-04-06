@@ -23,6 +23,19 @@ class DramasController < ApplicationController
     @episodes = @drama.episodes
   end
 
+  def edit
+    @category = Category.find(params[:category_id])
+    @drama = @category.dramas.find(params[:id])
+  end
+
+  def update
+    @category = Category.find(params[:category_id])
+    @drama = @category.dramas.find(params[:id])
+    @drama.update_attributes(drama_params)
+
+    redirect_to category_drama_path(@category, @drama)
+  end
+
   private
 
   def drama_params

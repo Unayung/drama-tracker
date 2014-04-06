@@ -1,4 +1,7 @@
-<%= link_to("New Episode", new_category_drama_episode_path(@category, @drama), :class => "btn btn-info pull-right") %>
+<div class="btn-group pull-right">
+<%= link_to("New Episode", new_category_drama_episode_path(@category, @drama), :class => "btn btn-info") %>
+<%= link_to("Edit", edit_category_drama_path(@category, @drama), :class => "btn btn-warning") %>
+</div>
 <h2><%= @drama.name %></h2>
 <hr>
 <% @episodes.each do |episode| %>
