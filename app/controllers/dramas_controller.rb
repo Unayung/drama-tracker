@@ -20,7 +20,7 @@ class DramasController < ApplicationController
   def show
     @category = Category.find(params[:category_id])
     @drama = @category.dramas.find(params[:id])
-    @episodes = @drama.episodes
+    @episodes = @drama.episodes.order(:play_date => :desc)
   end
 
   def edit

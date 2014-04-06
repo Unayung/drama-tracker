@@ -4,6 +4,7 @@
 #
 #  id          :integer          not null, primary key
 #  drama_id    :integer
+#  season      :integer
 #  number      :integer
 #  title       :string(255)
 #  description :string(255)
@@ -15,5 +16,5 @@
 class Episode < ActiveRecord::Base
   belongs_to :drama
   has_many :watched_records
-  validates_presence_of :number, :title
+  validates_presence_of :number, :title, :season
 end
