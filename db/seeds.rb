@@ -1,6 +1,3 @@
-User.create!([
-  {email: "unayung@gmail.com", encrypted_password: "$2a$10$Y.joZpOZQQQSz1j8ifKjyOiDmGnRqTxKR1NMzHThnVN4Vi5SEM.82", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 17, current_sign_in_at: "2014-04-06 11:16:43", last_sign_in_at: "2014-04-06 09:26:42", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", fb_id: "649064390", name: "unayung"}
-])
 Category.create!([
   {name: "美劇"},
   {name: "日劇"},
@@ -21,11 +18,4 @@ Episode.create!([
   {drama_id: 4, season: 9, number: 17, title: "Mother's Little Helper", description: "Dean copes with the side effects of the Mark of Cain, as Sam investigates a series of violent murders related directly to Abaddon.", play_date: "2014-03-25"},
   {drama_id: 5, season: 4, number: 15, title: "Us", description: "Glenn and Tara are set on the way to Terminus, but Abraham and his companions are reluctant. Meanwhile, conflict starts to rise between Daryl and one of the marauders, Len.", play_date: "2014-03-23"},
   {drama_id: 5, season: 4, number: 16, title: "A", description: "Rick, Carl and Michonne cross paths with the marauders once again on the way to Terminus, as the so-called sanctuary begins to reveal its true face.", play_date: "2014-03-30"}
-])
-WatchedRecord.create!([
-  {user_id: 1, episode_id: 2},
-  {user_id: 1, episode_id: 3},
-  {user_id: 1, episode_id: 4},
-  {user_id: 1, episode_id: 7},
-  {user_id: 1, episode_id: 8}
 ])
