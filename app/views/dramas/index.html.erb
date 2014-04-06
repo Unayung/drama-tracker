@@ -1,5 +1,8 @@
-<div class="row">
-<% @dramas.each do |drama| %>
+
+<% @dramas.each_with_index do |drama, index| %>
+  <% if index % 4 == 0 %>
+    <div class="row">
+  <% end %>
   <div class="col-md-3 col-sm-6 col-xs-12">
     <div class="rpost1">
       <%= link_to(drama_path(drama)) do %>
@@ -17,5 +20,7 @@
       <% end %>
     </div>
   </div>
+  <% if index % 4 == 3 %>
+    </div>
+  <% end %>
 <% end %>
-</div>
