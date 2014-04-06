@@ -1,11 +1,13 @@
 # == Schema Information
 #
-# Table name: dramas
+# Table name: episodes
 #
 #  id          :integer          not null, primary key
-#  name        :string(255)
-#  category_id :integer
+#  drama_id    :integer
+#  number      :integer
+#  title       :string(255)
 #  description :string(255)
+#  play_date   :date
 #  created_at  :datetime
 #  updated_at  :datetime
 #

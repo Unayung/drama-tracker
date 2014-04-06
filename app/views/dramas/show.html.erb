@@ -1,0 +1,20 @@
+<%= link_to("New Episode", new_category_drama_episode_path(@category, @drama), :class => "btn btn-info pull-right") %>
+<h2><%= @drama.name %></h2>
+<hr>
+<% @episodes.each do |episode| %>
+  <div class="well">
+  <% if current_user.present? %>
+  <% if current_user.have_watched?(episode) %>
+    <%= link_to(user_watched_record_path(current_user, episode), :class => "btn btn-warning pull-right", :method => :delete) do %>
+      <%= icon('times', "取消看過") %>
+    <% end %>
+  <% else %>
+    <%= link_to(user_watched_records_path(current_user, :episode => episode), :class => "btn btn-info pull-right", :method => :post) do %>
+      <%= icon('check', "標記看過", :class => "inverse") %>
+    <% end %>
+  <% end %>
+  <% end %>
+  <h3><%= episode.number %> - <%= episode.title %></h3>
+  <p><%= episode.description %></p>
+  </div>
+<% end %>

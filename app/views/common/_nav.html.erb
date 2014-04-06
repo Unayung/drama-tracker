@@ -1,0 +1,24 @@
+<div class="navbar bs-docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+    <!-- Navigation links starts here -->
+      <ul class="nav navbar-nav">
+        <!-- Navigation with sub menu. Please note down the syntax before you need. Each and every link is important. -->
+        <% Category.all.each do |category| %>
+        <li class="">
+          <%= link_to(category.name, category_path(category)) %>
+          
+        </li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</div>

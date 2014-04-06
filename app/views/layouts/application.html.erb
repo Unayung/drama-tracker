@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>DramaTracker</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <head>
+    <title>DramaTracker</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= render :partial => "common/header" %>
+    <%= render :partial => "common/nav" %>
+    <div class="content">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<%= current_user.email if current_user.present? %>
-<%= link_to("Fb login", user_omniauth_authorize_path(:facebook) ) %>
-<%= link_to("Logout",destroy_user_session_path, :method => :delete ) %>
-<%= yield %>
-
-</body>
+  <%= yield :javascripts %>
 </html>

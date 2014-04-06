@@ -32,6 +32,12 @@ gem 'omniauth-facebook'
 gem 'oauth2'
 
 gem 'settingslogic'
+
+# gem 'therubyracer'
+gem 'bootstrap-sass', '~> 3.1.1'
+gem 'font-awesome-sass'
+
+gem 'simple_form'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

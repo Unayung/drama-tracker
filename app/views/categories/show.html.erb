@@ -1,0 +1,22 @@
+<%= link_to("New Drama", new_category_drama_path(@category), :class => "btn btn-info pull-right") %>
+<h2><%= @category.name %></h2>
+<hr>
+<div class="row">
+<% @dramas.each do |drama| %>
+  <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="rpost1">
+      <div class="rimg">
+        <img src="img/photos/r1.jpg" alt="" class="img-responsive">
+      </div><!-- Title & Para -->
+      <div class="rdetails">
+        <h5>
+          <%= link_to(drama.name, category_drama_path(@category,drama)) %>
+        </h5>
+        <p>
+          <%= drama.description %>
+        </p>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>

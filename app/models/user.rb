@@ -28,6 +28,9 @@ class User < ActiveRecord::Base
   extend OmniauthCallbacks
 
   has_many :trackings
+  has_many :watched_records
 
-
+  def have_watched?(episode)
+    watched_records.find_by_episode_id(episode)
+  end
 end
