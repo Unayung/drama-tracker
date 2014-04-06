@@ -1,7 +1,7 @@
 class DramasController < ApplicationController
 
   def index
-    
+    @dramas = Drama.all    
   end
 
   def new

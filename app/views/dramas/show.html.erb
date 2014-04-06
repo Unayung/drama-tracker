@@ -5,16 +5,16 @@
   <div class="well">
   <% if current_user.present? %>
   <% if current_user.have_watched?(episode) %>
-    <%= link_to(user_watched_record_path(current_user, episode), :class => "btn btn-warning pull-right", :method => :delete) do %>
+    <%= link_to(user_watched_record_path(current_user, episode), :class => "btn btn-warning pull-right", :method => :delete, :remote => true) do %>
       <%= icon('times', "取消看過") %>
     <% end %>
   <% else %>
-    <%= link_to(user_watched_records_path(current_user, :episode => episode), :class => "btn btn-info pull-right", :method => :post) do %>
+    <%= link_to(user_watched_records_path(current_user, :episode => episode), :class => "btn btn-info pull-right", :method => :post, :remote => true) do %>
       <%= icon('check', "標記看過", :class => "inverse") %>
     <% end %>
   <% end %>
   <% end %>
-  <h3><%= episode.number %> - <%= episode.title %></h3>
+  <h3>E<%= episode.number %>「<%= episode.title %>」</h3>
   <p><%= episode.description %></p>
   </div>
 <% end %>

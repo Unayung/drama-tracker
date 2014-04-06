@@ -1,64 +1,19 @@
-<div class="rposts">
-  <div class="row">
-    <div class="col-md-3 col-sm-6 col-xs-12">
-      <div class="rpost1">
-        <div class="rimg">
-          <img src="img/photos/r1.jpg" alt="" class="img-responsive">
-        </div><!-- Title & Para -->
-        <div class="rdetails">
-          <h5>
-            Lorem ipsum
-          </h5>
-          <p>
-            Duis vulputate consectetur malesuada et in dictum nisi vehicula.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-12">
-      <div class="rpost1">
-        <div class="rimg">
-          <img src="img/photos/r2.jpg" alt="" class="img-responsive">
-        </div>
-        <div class="rdetails">
-          <h5>
-            Lorem ipsum
-          </h5>
-          <p>
-            Duis vulputate consectetur malesuada et netus et in dictum nisi vehicula.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-12">
-      <div class="rpost1">
-        <div class="rimg">
-          <img src="img/photos/r3.jpg" alt="" class="img-responsive">
-        </div>
-        <div class="rdetails">
-          <h5>
-            Lorem ipsum
-          </h5>
-          <p>
-            Duis vulputate consectetur malesuada et in dictum nisi vehicula.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-12">
-      <div class="rpost1">
-        <div class="rimg">
-          <img src="img/photos/r4.jpg" alt="" class="img-responsive">
-        </div>
-        <div class="rdetails">
-          <h5>
-            Lorem ipsum
-          </h5>
-          <p>
-            Duis vulputate consectetur malesuada et netus et in dictum nisi vehicula.
-          </p>
-        </div>
+<div class="row">
+<% @dramas.each do |drama| %>
+  <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="rpost1">
+      <div class="rimg">
+        <img src="img/photos/r1.jpg" alt="" class="img-responsive">
+      </div><!-- Title & Para -->
+      <div class="rdetails">
+        <h5>
+          <%= link_to(drama.name, category_drama_path(drama.category,drama)) %>
+        </h5>
+        <p>
+          <%= drama.description %>
+        </p>
       </div>
     </div>
   </div>
+<% end %>
 </div>
