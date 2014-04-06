@@ -5,7 +5,7 @@
 <% @dramas.each do |drama| %>
   <div class="col-md-3 col-sm-6 col-xs-12">
     <div class="rpost1">
-      <%= link_to(category_drama_path(@category,drama)) do %>
+      <%= link_to(drama_path(drama)) do %>
       <div class="rimg">
         <%= image_tag(drama.image.url, :class => "img-responsive") %>
       </div><!-- Title & Para -->

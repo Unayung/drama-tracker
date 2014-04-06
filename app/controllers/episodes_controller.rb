@@ -1,7 +1,6 @@
 class EpisodesController < ApplicationController
 
   def new
-    @category = Category.find(params[:category_id])
     @drama = Drama.find(params[:drama_id])
     @episode = @drama.episodes.new
   end

@@ -18,14 +18,12 @@ class DramasController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:category_id])
-    @drama = @category.dramas.find(params[:id])
+    @drama = Drama.find(params[:id])
     @episodes = @drama.episodes.order(:play_date => :desc)
   end
 
   def edit
-    @category = Category.find(params[:category_id])
-    @drama = @category.dramas.find(params[:id])
+    @drama = Drama.find(params[:id])
   end
 
   def update

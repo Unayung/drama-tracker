@@ -32,6 +32,14 @@ GEM
     bootstrap-sass (3.1.1.0)
       sass (~> 3.2)
     builder (3.2.2)
+    capistrano (2.15.5)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
+    capistrano-ext (1.2.1)
+      capistrano (>= 1.0.0)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -57,6 +65,7 @@ GEM
     font-awesome-sass (4.0.3.1)
       sass (~> 3.2)
     hashie (2.0.5)
+    highline (1.6.21)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (2.0.5)
@@ -77,6 +86,13 @@ GEM
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     mysql2 (0.3.15)
+    net-scp (1.1.2)
+      net-ssh (>= 2.6.5)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.8.0)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
     oauth2 (0.9.3)
       faraday (>= 0.8, < 0.10)
       jwt (~> 0.1.8)
@@ -116,6 +132,8 @@ GEM
     rake (10.2.2)
     rdoc (4.1.1)
       json (~> 1.4)
+    rvm-capistrano (1.5.1)
+      capistrano (~> 2.15.4)
     sass (3.2.18)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -160,6 +178,8 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (~> 3.1.1)
+  capistrano
+  capistrano-ext
   carrierwave
   coffee-rails (~> 4.0.0)
   devise
@@ -171,6 +191,7 @@ DEPENDENCIES
   omniauth
   omniauth-facebook
   rails (= 4.1.0.rc2)
+  rvm-capistrano
   sass-rails (~> 4.0.2)
   sdoc (~> 0.4.0)
   settingslogic

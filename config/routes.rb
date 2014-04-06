@@ -19,6 +19,10 @@ Rails.application.routes.draw do
   resources :users do
     resources :watched_records
   end
+
+  resources :dramas do
+    resources :episodes
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
