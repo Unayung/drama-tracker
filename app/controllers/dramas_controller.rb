@@ -30,7 +30,7 @@ class DramasController < ApplicationController
     @drama = Drama.find(params[:id])
     @drama.update_attributes(drama_params)
 
-    redirect_to category_drama_path(@category, @drama)
+    redirect_to drama_path(@drama)
   end
 
   private
